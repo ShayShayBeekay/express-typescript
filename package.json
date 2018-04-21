@@ -1,0 +1,28 @@
+{
+  "name": "express-tpyescript",
+  "version": "1.0.0",
+  "description": "A template for Express using TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "author": "Shay Brennan-Kelly",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bluebird": "^3.5.20",
+    "@types/body-parser": "^1.16.8",
+    "@types/chai": "^4.1.2",
+    "@types/chai-http": "^3.0.4",
+    "@types/consul": "^0.23.32",
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^8.0.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "swagger-client": "^3.5.1",
+    "swagger-ui-express": "^2.0.14",
+    "typescript": "^2.8.0",
+    "winston": "^2.3.9",
+    "yamljs": "^0.3.0"
+  }
+}

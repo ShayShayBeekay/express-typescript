@@ -1,0 +1,36 @@
+swagger: '2.0'
+info:
+  description: Express Typescript Template
+  version: 1.0.0
+  title: Express Typescript Template
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  - name: Health Check
+    description: Check service is running
+schemes:
+  - https
+paths:
+  /health-check:
+    get:
+      tags:
+        - Health Check
+      summary: Verify service is running
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Express Typescript Template - OK
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                description: Status
+              uptime:
+                type: string
+                description: Uptime in user-readable format
+        '500':
+          description: Service unavailable
