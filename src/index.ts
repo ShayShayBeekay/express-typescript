@@ -1,5 +1,4 @@
 import * as bodyparser from "body-parser";
-import * as Promise from "bluebird";
 import * as swaggerUi from "swagger-ui-express";
 import * as YAML from "yamljs";
 
@@ -22,7 +21,7 @@ const swaggerDoc = YAML.load("./swagger.yml");
 app.use("/endpoints", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 // add common routes for health-check and version
-app.get("/health-check", (req: any, res: any) => {
+app.get("/health-check", (req: express.Request, res: express.Response) => {
   const uptime = process.uptime();
   res.json(
     { status: `${config.servicename}: OK`,
